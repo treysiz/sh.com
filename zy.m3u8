@@ -1,12 +1,12 @@
 {
   "sites": [
     {
-      "key": "csp_xml_鱼乐资源",
-      "name": "🐝鱼乐资源",
-      "type": 3,
-      "api": "https://www.ylzy1.com/api.php/provide/vod/",
+      "key": "海外看",
+      "name": "海外看",
+      "type": 1,
+      "api": "https://haiwaikan.com/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 0,
+      "quickSearch": 1,
       "filterable": 0,
       "categories": [
         "国产剧",
@@ -20,11 +20,12 @@
   ],
   "lives": [
     {
+      "group": "自定义",
       "channels": [
         {
-          "name": "美华",
+          "name": "直播源",
           "urls": [
-            "https://38.47.101.71/"
+            "about:blank"
           ]
         }
       ]
