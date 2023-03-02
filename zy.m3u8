@@ -44,7 +44,7 @@
     {
       "key": "淘片",
       "name": "淘片",
-      "type": 0,
+      "type": 1,
       "api": "https://taopianapi.com/home/cjapi/as/mc/vod/xml",
       "searchable": 1,
       "quickSearch": 1,
