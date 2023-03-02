@@ -101,18 +101,6 @@
         "体育",
         "伦理片"
       ]
-    },
-    {
-      "type": 0,
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
-      "type": 0,
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
     }
   ],
   "lives": [
