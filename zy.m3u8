@@ -1,57 +1,349 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.2.4/animate.min.css">
-        <link rel="stylesheet" href="./static/editor.css">
-        <title>猫影视TV配置编辑器</title>
-</head>
-<body>
-<div id="loading"
-     style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: #000; opacity: 0.5; z-index:9999;">
-    <center style="position: absolute; top: 50%; left: 50%; color:#fff">请稍候...</center>
-</div>
-<div class="container">
-    <div class="page-header">
-        <h3>
-            配置编辑器 &nbsp;<small>本地记录依赖浏览器缓存，清空缓存将丢失记录</small><img src="./static/gh_16e4613251a6_258.jpg" style="width:150px;height:150px;position:absolute; top:10px; right:10px">
-        </h3>
-    </div>
-    <div class="row">
-        <div class="btn-group btn-group-sm col-md-5" role="group">
-            <button type="button" class="btn btn-success" onclick="show_visual('999999')">可视</button>
-            <button type="button" class="btn btn-info" onclick="show_code('999999')">源码</button>
-            <button type="button" class="btn btn-warning" onclick="empty_diy('999999')">清空</button>
-            <button type="button" class="btn btn-primary" onclick="save_diy('999999')">保存</button>
-        </div>
-        <div class="col-md-5">
-            <label class="btn btn-primary btn-sm">
-                配置转图片 <input type="file" onchange="toImg(event)" style="display: none;">
-            </label>
-        </div>
-    </div>
-    <h4></h4>
-    <form id="diy_cfg_jf_999999" style="display: none;"></form>
-    <textarea rows="30" class="form-control" id="diy_cfg_code_999999" style="margin-top: 10px; display: none;"></textarea>    
-</div>
-</body>
-<script src="//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/bootstrap-notify@3.1.3/bootstrap-notify.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/bootbox@4.4.0/bootbox.min.js"></script>
-<script src="./static/index.js"></script>
-<script src="//cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/core-min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/cipher-core-min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/aes-min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/mode-ecb-min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-<script src="./static/jsonform.js"></script>
-<script src="./static/jsv.js"></script>
-<script src="./static/editor.js"></script>
-<script src="./static/jsonlint.js"></script>
-</html>
+{
+  "sites": [
+    {
+      "key": "1080zy",
+      "name": "高清资源",
+      "type": 3,
+      "api": "https://api.1080zyku.com/inc/api_mac10_all.php",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "categories": [
+        "国产剧",
+        "台湾剧",
+        "香港剧",
+        "韩国剧",
+        "日本剧",
+        "欧美剧",
+        "泰国剧",
+        "海外剧",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "记录片",
+        "动画片",
+        "倫理片",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "国产动漫",
+        "日韩动漫",
+        "港台动漫",
+        "欧美动漫",
+        "福利"
+      ]
+    },
+    {
+      "key": "陶片资源",
+      "name": "陶片资源",
+      "type": 3,
+      "api": "https://taopianapi.com/home/cjapi/as/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "categories": [
+        "电视剧/国产剧",
+        "电视剧/香港剧",
+        "电视剧/台湾剧",
+        "电视剧/韩国剧",
+        "电视剧/欧美剧",
+        "电视剧/泰国剧",
+        "电视剧/海外剧",
+        "电视剧/日本剧",
+        "电影/动作片",
+        "电影/喜剧片",
+        "电影/爱情片",
+        "电影/科幻片",
+        "电影/恐怖片",
+        "电影/剧情片",
+        "电影/战争片",
+        "电影/悬疑片",
+        "电影/冒险片",
+        "电影/动画片",
+        "电影/惊悚片",
+        "电影/奇幻片",
+        "电影/纪录片",
+        "综艺/大陆综艺",
+        "综艺/日韩综艺",
+        "综艺/港台综艺",
+        "综艺/欧美综艺",
+        "综艺/海外综"
+      ]
+    },
+    {
+      "key": "光速资源",
+      "name": "光速资源",
+      "type": 3,
+      "api": "https://api.guangsuapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "categories": [
+        "大陆剧",
+        "欧美剧",
+        "港澳剧",
+        "韩剧",
+        "日剧",
+        "台湾剧",
+        "泰剧",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "剧情片",
+        "恐怖片",
+        "战争片",
+        "动漫电影",
+        "综艺",
+        "动漫",
+        "记录片",
+        "伦理片",
+        "体育赛事"
+      ]
+    },
+    {
+      "key": "新浪资源",
+      "name": "新浪资源",
+      "type": 3,
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "categories": [
+        "大陆剧",
+        "港澳剧",
+        "台湾剧",
+        "欧美剧",
+        "韩剧",
+        "日剧",
+        "泰剧",
+        "动作片",
+        "爱情片",
+        "科幻片",
+        "战争片",
+        "剧情片",
+        "恐怖片",
+        "喜剧片",
+        "动漫电影",
+        "动漫",
+        "综艺",
+        "纪录片",
+        "伦理片",
+        "体育"
+      ]
+    },
+    {
+      "key": "金鹰资源",
+      "name": "金鹰资源",
+      "type": 3,
+      "api": "https://jyzyapi.com/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "categories": [
+        "内地剧",
+        "香港剧",
+        "韩剧",
+        "日剧",
+        "台湾剧",
+        "欧美剧",
+        "马泰剧",
+        "恐怖片",
+        "动画片",
+        "剧情片",
+        "战争片",
+        "动作片",
+        "记录片",
+        "爱情片",
+        "喜剧片",
+        "科幻片",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "综艺",
+        "伦理片",
+        "体育赛事"
+      ]
+    }
+  ],
+  "lives": [
+    {
+      "group": "美国-加拿大频道",
+      "channels": [
+        {
+          "name": "美国-加拿大频道",
+          "urls": [
+            "https://raw.githubusercontent.com/treysiz/treysiz.github.io/main/GAT.m3u"
+          ]
+        }
+      ]
+    }
+  ],
+  "ijk": [
+    {
+      "group": "软解码",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "max-buffer-size",
+          "value": "5242880"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "group": "硬解码",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "max-buffer-size",
+          "value": "5242880"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}
