@@ -3,7 +3,7 @@
     {
       "key": "点播源",
       "name": "点播源",
-      "type": 3,
+      "type": 1,
       "api": "https://api.guangsuapi.com/api.php/provide/vod",
       "searchable": 1,
       "quickSearch": 1,
