@@ -1,6 +1,23 @@
 {
   "sites": [
     {
+      "key": "点播源",
+      "name": "点播源",
+      "type": 0,
+      "api": "http://www.kkkkkbbbbb.com/api.php/provide/vod/at/xml/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "categories": [
+        "国产剧",
+        "港台剧",
+        "日韩剧",
+        "欧美剧",
+        "泰剧",
+        "综艺"
+      ]
+    },
+   {
       "key": "1080zy",
       "name": "高清资源",
       "type": 3,
