@@ -171,7 +171,7 @@
     {
       "key": "1080资源",
       "name": "1080资源",
-      "type": 0,
+      "type": 1,
       "api": "https://api.1080zyku.com/inc/apijson.php",
       "searchable": 1,
       "quickSearch": 1,
@@ -310,7 +310,7 @@
       "key": "百度资源",
       "name": "百度资源",
       "type": 1,
-      "api": "https://api.apibdzy.com/api.php/provide/art/",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
