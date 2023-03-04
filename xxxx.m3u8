@@ -199,6 +199,22 @@
         "麻豆传媒",
         "恋腿癖"
       ]
+    },
+    {
+      "key": "美华【博天堂】",
+      "name": "美华【博天堂】",
+      "type": 0,
+      "api": "http://bttcj.com/inc/sapi.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "categories": [
+        "香港伦理",
+        "国产伦理",
+        "日本伦理",
+        "韩国伦理",
+        "欧美伦理"
+      ]
     }
   ]
 }
