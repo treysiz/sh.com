@@ -4,7 +4,7 @@
       "key": "美华成人（大地）",
       "name": "美华成人（大地）",
       "type": 0,
-      "api": "https://dadiapi.com/feifei2/",
+      "api": "https://dadiapi.com/api.php",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
